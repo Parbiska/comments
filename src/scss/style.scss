@@ -1,0 +1,129 @@
+@import 'libs/bootstrap-reboot.min';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+
+@import 'base/variables';
+@import 'base/mixins';
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: rgb(236, 234, 234);
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.main {
+    background-color: #fff;
+    margin-top: 20px;
+    padding: 20px 20px;
+    border-radius: 14px;
+}
+
+.img-container {
+    margin-top: 10px;
+    img {
+        width: 100%;
+    }
+}
+
+.title {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.text {
+    font-size: 20px;
+    line-height: 1.2;
+}
+
+.subtitle {
+    font-weight: 500;
+    margin-top: 10px;
+}
+
+.comments {
+    background-color: #fff;
+    margin: 20px 0 40px 0 ;
+    padding: 20px 30px;
+    border-radius: 14px;
+
+    &__form {
+        &__name {
+            background-color: #f7f7f7;
+            border: 1px solid rgba(0,0,0,.03);
+            padding: 5px 10px ;
+            border-radius: 10px;
+            margin-right: 10px;
+        }
+        &__date {
+            font-size: 17px;
+            margin-bottom: 0;
+        }
+        &__area {
+            margin-top: 8px;
+            width: 100%;
+            resize: none;
+            border-radius: 10px;
+            padding: 12px 11px ;
+            background-color: #f7f7f7;
+            border: 1px solid rgba(0,0,0,.03);
+        }
+        &__button {
+            margin-top: 10px;
+            border: none;
+            width: 120px;
+            height: 40px;
+            border-radius: 50px;
+        }
+        #errorContainer {
+            color: red;
+            font-size: 18px;
+            margin-left: 16px;
+        }
+    }
+
+    #comments-container {
+        padding-left: 8px;
+        .comment {
+            position: relative;
+            margin-top: 30px;
+            &__name {
+                font-weight: 500;
+                font-size: 20px;
+                line-height: 1;
+            }
+            &__date {
+                margin-left: 6px;
+                font-size: 14px;
+            }
+            &__text {
+                margin-top: 7px;
+                font-size: 18px;
+                line-height: 1.4;
+            }
+            &__actions {
+                position: absolute;
+                right: 0;
+                top: 0;
+                display: flex;
+            }
+            &__action {
+                width: 25px;
+                height: 25px;
+                &:hover {
+                    cursor: pointer;
+                }
+                img {
+                    height: 100%;
+                }
+            }
+        }
+    }
+}

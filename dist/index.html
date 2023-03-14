@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/style.min.css">
+
+    <title>Комментарии</title>
+</head>
+
+<body>
+    <div class="container">
+        <main class="main">
+            <h1 class="title">Загаловок</h1>
+
+            <div class="text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita perferendis eos dignissimos possimus
+                rerum. Architecto, voluptatum consectetur, officiis sunt aperiam quidem, reiciendis inventore qui at
+                repellat cum? Nam, dolore voluptatem.
+            </div>
+
+            <div class="img-container">
+                <img src="img/sakura.jpeg" alt="picture">
+            </div>
+
+            <h2 class="subtitle">Подзаголовок</h2>
+
+            <div class="text">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nisi dignissimos modi repellendus sequi itaque
+                dolor qui voluptate consequatur nihil illo facilis sint, nesciunt fuga doloremque debitis quae maxime
+                mollitia quis.
+                Delectus blanditiis sit molestias dicta laborum aliquid iure labore obcaecati quo voluptates eaque
+                inventore et similique, officiis sed adipisci repudiandae facilis animi dolor cumque dolore
+                reprehenderit sint pariatur! Tempora, nulla.
+            </div>
+        </main>
+        <section class="comments">
+            <h2 class="comments__title">Комментарии</h2>
+
+            <form class="comments__form" id="comment">
+                <input required placeholder="Ваше имя..." type="text" name="name" class="comments__form__name">
+                <label class="comments__form__date">
+                    <input name="checkbox" type="checkbox">
+                    <span>Выбрать дату</span>
+                    <input type="date" name="inputDate" hidden>
+                </label>
+                <textarea required placeholder="Написать Комментарий..." class="comments__form__area" name="area"
+                    id="textarea"></textarea>
+
+                <button type="submit" name="button" class="comments__form__button">Отправить</button>
+
+                <span id="errorContainer" name="error"></span>
+            </form>
+
+            <div id="comments-container">
+            </div>
+        </section>
+    </div>
+
+    <script src="js/app.min.js"></script>
+</body>
+
+</html>
