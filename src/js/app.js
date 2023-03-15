@@ -51,7 +51,8 @@ form.onsubmit = (e) => {
 
 	let date
 
-	if (isSetData) {
+	if (isSetData && form.elements.inputDate.value !== '') {
+		console.log(form.elements.inputDate.value)
 		date = new Date(form.elements.inputDate.valueAsNumber)
 		date = getCommentDate(date)
 	} else {
