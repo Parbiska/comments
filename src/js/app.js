@@ -2,7 +2,7 @@ const form = document.forms[0]
 const commentsContainer = document.getElementById('comments-container')
 const errorContainer = document.getElementById('errorContainer')
 
-form.onsubmit = (e) => {
+form.addEventListener('submit', (e) => {
 	const area = form.elements.area
 	const name = form.elements.name
 	const isSetData = form.elements.checkbox.checked
@@ -52,7 +52,6 @@ form.onsubmit = (e) => {
 	let date
 
 	if (isSetData && form.elements.inputDate.value !== '') {
-		console.log(form.elements.inputDate.value)
 		date = new Date(form.elements.inputDate.valueAsNumber)
 		date = getCommentDate(date)
 	} else {
@@ -69,7 +68,6 @@ form.onsubmit = (e) => {
 			<div class="comment__text">${area.value}</div>
 			<div class="comment__actions">
 				<div class="comment__action comment__like">
-					<span></span>
 					<img name="like" src="img/heart.svg" alt="Like">
 				</div>
 				<div class="comment__action comment__delete"><img name="delete" src="img/trash.svg" alt="delete"></div>
@@ -94,7 +92,7 @@ form.onsubmit = (e) => {
 	errorContainer.innerHTML = ''
 	name.value = ''
 	area.value = ''
-}
+})
 
 document.addEventListener('keydown', (e) => {
 	if (e.key === 'Enter' && !e.shiftKey) {
@@ -104,7 +102,7 @@ document.addEventListener('keydown', (e) => {
 
 const inputDate = form.elements.inputDate
 
-form.elements.checkbox.onclick = function () {
+form.elements.checkbox.onclick = () => {
 	const span = inputDate.previousElementSibling
 
 	if (this.checked) {
